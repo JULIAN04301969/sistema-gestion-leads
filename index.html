@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Integral de Gestión de Leads</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Gestión de Leads</h1>
+        <nav class="main-nav">
+            <button id="btn-dashboard" class="nav-link active">Dashboard</button>
+            <button id="btn-registro" class="nav-link">Registrar Lead</button>
+        </nav>
+    </header>
+<div id="auth-container" class="auth-view">
+    <div class="login-card">
+        <h2>SISTEMA DE GESTIÓN DE LEADS</h2>
+        <p>Ingrese sus credenciales para continuar</p>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" required placeholder="Ej: asesor_ventas">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn-primary">Iniciar Sesión</button>
+        </form>
+        <div id="login-error" class="error-msg" style="display:none;">Credenciales incorrectas</div>
+    </div>
+</div>
+
+<header id="app-header" class="main-header" style="display:none;">
+    </header>
+<main id="app-content" style="display:none;">
+    </main>
+    <main id="app-container">
+        <section id="view-leads" class="view">
+            <div class="header-section">
+                <h2>Panel de Seguimiento</h2>
+            </div>
+            <div class="table-container">
+                <table id="leads-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Registro</th>
+                            <th>Último Contacto</th>
+                            <th>Estado</th>
+                            <th>Prioridad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
